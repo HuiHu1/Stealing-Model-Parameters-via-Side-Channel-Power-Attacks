@@ -1,1 +1,1 @@
-#### Data-Privacy-Protection-under-Side-Channel-Attacks
+#### Model parameter analysis under side-channel attacks
