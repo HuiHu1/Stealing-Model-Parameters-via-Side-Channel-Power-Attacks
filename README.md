@@ -13,21 +13,13 @@ ChipWhisperer Lite 1200, Jupyter Notebook.
 Step 1: Getting the VM and Jupyter Up and Running.
 
 (1) Download the Latest Version of VirtualBox [[Download]](https://www.virtualbox.org/wiki/Downloads).
-
 (2) Download/Install the extension pack [[Download]](https://download.virtualbox.org/virtualbox/6.1.18/). 
-
 (3) Download the current ChipWhisperer VM [[Download]](https://github.com/newaetech/chipwhisperer/releases/). 
-
 (4) Download 7Zip [[Download]](https://www.7-zip.org/download.html). 
-
 (5) UnZip The VM you just downloaded.
-
 (6) Launch Virtualbox > Machine > Add... > Select File You Just Unzipped.
-
 (7) Start/Run The virtual Machine and login.
-
 (8) Setup a password for Jupyter.
-
 (9) Reboot the VM. sudo reboot and open Firefox/Chrome (ONLY) - navigate to 127.0.0.1:8888 or localhost:8888.
  
 Step 2: Target Board Setup (SCOPETYPE = 'OPENADC'  PLATFORM = 'CWLITEXMEGA'  SS_VER='SS_VER_1_1').
