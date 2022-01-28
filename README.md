@@ -36,6 +36,12 @@ Step 3: %run /home/vagrant/work/projects/chipwhisperer/jupyter/Setup_Scripts/Set
 
 Step 4: Compile Program to Run on Board. 
 
+PATH = "/home/vagrant/work/projects/chipwhisperer/hardware/victims/firmware/"
+TARGET_MODEL = "Model Name" 
+%%bash -s "$PLATFORM" "$PATH" "$TARGET_MODEL" "$SS_VER"
+cd $2$3 
+make PLATFORM=$1 CRYPTO_TARGET=NONE SS_VER=$4
+
 Step 5: Pass Model Data Over Serial.
 
 Step 6: Run Model and Collect Power Traces.
