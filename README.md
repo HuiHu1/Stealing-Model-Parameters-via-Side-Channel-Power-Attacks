@@ -21,4 +21,5 @@ ChipWhisperer Lite 1200, Jupyter Notebook.
 
 ### Run the code
 
-#### Step 1: 
+#### Step 1: Getting the VM and Jupyter Up and Running.
+#### Step 2: Target Board Setup (SCOPETYPE = 'OPENADC'  PLATFORM = 'CWLITEXMEGA'  SS_VER='SS_VER_1_1')
