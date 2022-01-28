@@ -38,9 +38,9 @@ int main(void) {
     platform_init();
     init_uart();
     trigger_setup();
-	simpleserial_init();
+    simpleserial_init();
     
-    // Add command to read data from serial
+    // Add commands
     simpleserial_addcmd('d', NUM_FEATURES+1, read_data);  
     simpleserial_addcmd('i', 1, init_weights);
     simpleserial_addcmd('e', 1, epoch);
@@ -50,7 +50,6 @@ int main(void) {
         simpleserial_get();
     }
 }
-
 
 uint8_t read_data(uint8_t* data, uint8_t len) {
     // Test to see if you are filling training or testing data
@@ -117,20 +116,15 @@ uint8_t epoch(uint8_t* data, uint8_t len) {
         for(int f = 0; f < NUM_FEATURES; f++) {
             sample[f] = training_data[indices[s]][f];
         }
-
-        // Feed sample forward through network 
         feed_forward(sample);
-
         // Cacluclate loss (to track learning)
         double expected_output[NUM_OUTPUT_NODES];
         for(int o = 0; o < NUM_OUTPUT_NODES; o++) {
             expected_output[o] = training_labels[indices[s]]; // Assumes one output, otherwise = training_labels[indices[s]][o];
         }
-
         back_prop(expected_output, sample);
     }  
     trigger_low();
-    
     //Return confirmation back to notebook
     read_count++;
     simpleserial_put('r', 2, (uint8_t*) &read_count);
