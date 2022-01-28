@@ -22,8 +22,13 @@ ChipWhisperer Lite 1200, Jupyter Notebook.
 ### Run the code
 
 Step 1: Getting the VM and Jupyter Up and Running.
+
 Step 2: Target Board Setup (SCOPETYPE = 'OPENADC'  PLATFORM = 'CWLITEXMEGA'  SS_VER='SS_VER_1_1').
+
 Step 3: %run /home/vagrant/work/projects/chipwhisperer/jupyter/Setup_Scripts/Setup_Generic.ipynb.
+
 Step 4: Compile Program to Run on Board. 
+
 Step 5: Pass Model Data Over Serial.
+
 Step 6: Run Model and Collect Power Traces.
