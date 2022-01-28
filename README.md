@@ -21,4 +21,4 @@ ChipWhisperer Lite 1200, Jupyter Notebook.
 
 ### Run the code
 
-Update soon
+#### Step 1: 
