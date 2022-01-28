@@ -16,13 +16,9 @@
 #define NUM_FEATURES 6
 #define N 6
 
-
 uint8_t eye[NUM_FEATURES][NUM_FEATURES];
 uint8_t parameter[NUM_FEATURES];
-
-
 uint8_t lamda=8.0;
-
 int read_count;
 
 uint8_t training_data[NUM_TRAIN][NUM_FEATURES];
@@ -42,11 +38,11 @@ int main(void){
     // Initialize counter
     read_count = 0;
     
-    // Initialize CW stuff and things
+    // Initialize CW stuff
     platform_init();
     init_uart();
     trigger_setup();
-	simpleserial_init();
+    simpleserial_init();
     
     // Add command to read data from serial
     simpleserial_addcmd('d', NUM_FEATURES+1, read_data);  
@@ -68,7 +64,6 @@ uint8_t read_data(uint8_t* data, uint8_t len) {
             memcpy(&feature, &data[f], sizeof(uint8_t));
             training_data[read_count][f] = feature;
         }
-        
         // Store label
         uint8_t feature = 0.0;
         memcpy(&feature, &data[NUM_FEATURES], sizeof(uint8_t));
@@ -83,8 +78,6 @@ uint8_t read_data(uint8_t* data, uint8_t len) {
             memcpy(&feature, &data[f], sizeof(uint8_t));
             testing_data[read_count-NUM_TRAIN][f] = feature;
         }
-        
-        // Store label
         uint8_t feature = 0.0;
         memcpy(&feature, &data[NUM_FEATURES], sizeof(uint8_t));
         testing_labels[read_count-NUM_TRAIN] = feature;
@@ -126,7 +119,6 @@ uint8_t epoch(uint8_t* data, uint8_t len) {
     inverse(N,add,inverse_matrix);
     multiplyMatrices(NUM_FEATURES,NUM_FEATURES,NUM_FEATURES,NUM_TRAIN,inverse_matrix,transpose,mult2);
     multiply_matrice_vector(NUM_FEATURES,NUM_TRAIN,mult2,training_labels,parameter);
-    
     //Return confirmation back to notebook
     trigger_low();
     read_count++;
