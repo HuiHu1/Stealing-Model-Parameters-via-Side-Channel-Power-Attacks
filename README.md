@@ -17,7 +17,7 @@ Side-channel attacks target system implementation statistics, such as the electr
 ```
 ### Requirements
 
-Update soon
+ChipWhisperer Lite 1200, Jupyter Notebook.
 
 ### Run the code
 
