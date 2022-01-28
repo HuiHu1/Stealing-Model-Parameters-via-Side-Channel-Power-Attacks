@@ -9,6 +9,9 @@ ChipWhisperer Lite 1200, Jupyter Notebook.
 
 ### Run the code
 
+```
+{ 
+
 #### Step 1: Getting the VM and Jupyter Up and Running.
 
 (1) Download the Latest Version of VirtualBox [[Download]](https://www.virtualbox.org/wiki/Downloads).
@@ -28,6 +31,9 @@ Step 4: Compile Program to Run on Board.
 Step 5: Pass Model Data Over Serial.
 
 Step 6: Run Model and Collect Power Traces.
+ 
+}
+```
 
 ### Citation
 ```
