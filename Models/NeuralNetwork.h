@@ -14,9 +14,9 @@
 #define BATCH_SIZE 10
 #define NUM_FEATURES 6
 #define NUM_SAMPLES 713
-#define NUM_HIDDEN_LAYERS 2    // C code assumes 2 hidden layers right now
+#define NUM_HIDDEN_LAYERS 2    
 #define NUM_HIDDEN_NODES  8
-#define NUM_OUTPUT_NODES  1    // C code assumes 1 output node right now
+#define NUM_OUTPUT_NODES  1    
 #define LEARNING_RATE 0.025
 #define BIAS 0.75
 
@@ -42,8 +42,7 @@ uint8_t epoch(uint8_t* data, uint8_t len);
 // Function to test one sample
 uint8_t test_sample(uint8_t* data, uint8_t len);
 
-// Other Funcs
-// Activation function and derivative of activation functions
+// Activation functions and derivative of activation functions
 double sigmoid(double x);
 double sigmoid_prime(double x);
 double relu(double x);
