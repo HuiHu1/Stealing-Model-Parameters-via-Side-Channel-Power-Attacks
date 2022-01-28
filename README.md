@@ -9,8 +9,16 @@ ChipWhisperer Lite 1200, Jupyter Notebook.
 
 ### Run the code
 
-Step 1: Getting the VM and Jupyter Up and Running.
+#### Step 1: Getting the VM and Jupyter Up and Running.
 
+(1) Download the Latest Version of VirtualBox [[Download]](https://www.virtualbox.org/wiki/Downloads).
+
+(2) Download/Install the extension pack [[Download]](https://download.virtualbox.org/virtualbox/6.1.18/). 
+
+(3) Download the current ChipWhisperer VM [[Download]](https://github.com/newaetech/chipwhisperer/releases/). 
+
+(4) 
+ 
 Step 2: Target Board Setup (SCOPETYPE = 'OPENADC'  PLATFORM = 'CWLITEXMEGA'  SS_VER='SS_VER_1_1').
 
 Step 3: %run /home/vagrant/work/projects/chipwhisperer/jupyter/Setup_Scripts/Setup_Generic.ipynb.
