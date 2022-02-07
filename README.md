@@ -10,7 +10,7 @@ ChipWhisperer Lite 1200, Jupyter Notebook.
 ### Run the code
 
 ```
-Step 1: Get the VM and Jupyter Up and Running.
+Step 1: Get the VM and Jupyter up and running.
 
 (1) Download the latest version of VirtualBox (Link: https://www.virtualbox.org/wiki/Downloads).
 (2) Download/Install the extension pack (Link: https://download.virtualbox.org/virtualbox/6.1.18/). 
