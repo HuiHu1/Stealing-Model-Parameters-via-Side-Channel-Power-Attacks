@@ -12,30 +12,30 @@ ChipWhisperer Lite 1200, Jupyter Notebook.
 ```
 Step 1: Get the VM and Jupyter Up and Running.
 
-(1) Download the Latest Version of VirtualBox (Link: https://www.virtualbox.org/wiki/Downloads).
+(1) Download the latest version of VirtualBox (Link: https://www.virtualbox.org/wiki/Downloads).
 (2) Download/Install the extension pack (Link: https://download.virtualbox.org/virtualbox/6.1.18/). 
 (3) Download the current ChipWhisperer VM (Link: https://github.com/newaetech/chipwhisperer/releases/). 
 (4) Download 7Zip (Link: https://www.7-zip.org/download.html). 
-(5) UnZip The VM you just downloaded.
-(6) Launch Virtualbox > Machine > Add... > Select File You Just Unzipped.
-(7) Start/Run The virtual Machine and login.
+(5) UnZip the VM you just downloaded.
+(6) Launch Virtualbox > Machine > Add... > Select File you just unzipped.
+(7) Start/Run the virtual machine and login.
 (8) Setup a password for Jupyter.
 (9) Reboot the VM. sudo reboot and open Firefox/Chrome (ONLY) - navigate to 127.0.0.1:8888 or localhost:8888.
 
-Step 2: Target Board Setup (SCOPETYPE = 'OPENADC'  PLATFORM = 'CWLITEXMEGA'  SS_VER='SS_VER_1_1').
+Step 2: Target board setup (SCOPETYPE = 'OPENADC'  PLATFORM = 'CWLITEXMEGA'  SS_VER='SS_VER_1_1').
 
 Step 3: %run /home/vagrant/work/projects/chipwhisperer/jupyter/Setup_Scripts/Setup_Generic.ipynb.
 
-Step 4: Compile Program to Run on Board. 
+Step 4: Compile program to run on board. 
 PATH = "/home/vagrant/work/projects/chipwhisperer/hardware/victims/firmware/"
 TARGET_MODEL = "Model Name" 
 %%bash -s "$PLATFORM" "$PATH" "$TARGET_MODEL" "$SS_VER"
 cd $2$3 
 make PLATFORM=$1 CRYPTO_TARGET=NONE SS_VER=$4
 
-Step 5: Pass Model Data Over Serial.
+Step 5: Pass model data over serial.
 
-Step 6: Run Model and Collect Power Traces.
+Step 6: Run model and collect power traces.
 ```
 ### Citation
 ```
